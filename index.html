@@ -215,16 +215,53 @@
         }
 
         .strategy-card {
-            background: linear-gradient(145deg, var(--chart-paper), #E8E0D0);
+            background: linear-gradient(145deg, #F5F1E8, #E8E0D0) !important;
             border: 3px solid var(--rope-brown);
             border-radius: 20px;
             padding: 25px;
             position: relative;
             transition: all 0.4s ease;
-            color: var(--ocean-blue);
+            color: var(--ocean-blue) !important;
             box-shadow: 
                 0 10px 30px rgba(0,0,0,0.2),
                 inset 0 1px 0 rgba(255,255,255,0.3);
+        }
+
+        .strategy-card * {
+            color: var(--ocean-blue) !important;
+        }
+
+        .strategy-card .card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--ocean-blue) !important;
+            line-height: 1.3;
+        }
+
+        .strategy-card .card-focus {
+            font-size: 0.95rem;
+            color: var(--deep-sea) !important;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .strategy-card .card-features {
+            font-size: 0.85rem;
+            color: var(--wave-blue) !important;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .strategy-card .card-best-for {
+            font-size: 0.9rem;
+            color: var(--rope-brown) !important;
+            margin-bottom: 20px;
+            font-style: italic;
+            padding: 8px 12px;
+            background: rgba(139, 69, 19, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid var(--rope-brown);
         }
 
         .strategy-card:hover {
@@ -267,6 +304,7 @@
             font-weight: bold;
             color: var(--ocean-blue);
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            font-size: 1.2rem;
         }
 
         .card-title {
@@ -550,9 +588,7 @@
         <div class="strategies-grid">
             <div class="strategy-card">
                 <div class="card-header">
-                    <div class="company-logo">
-                        <img src="https://logos-world.net/wp-content/uploads/2022/03/AI21-Labs-Logo.png" alt="AI21" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
-                    </div>
+                    <div class="company-logo">A</div>
                     <h3 class="card-title">AI21 - Top 12 AI Agent Frameworks</h3>
                 </div>
                 <p class="card-focus"><strong>Course:</strong> Comprehensive comparison of leading agentic AI frameworks</p>
@@ -565,9 +601,7 @@
 
             <div class="strategy-card">
                 <div class="card-header">
-                    <div class="company-logo">
-                        <img src="https://www.bizzuka.com/wp-content/uploads/2023/01/Bizzuka-logo-color-horizontal.png" alt="Bizzuka" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
-                    </div>
+                    <div class="company-logo">B</div>
                     <h3 class="card-title">Bizzuka - AI Strategy Canvas™ Framework</h3>
                 </div>
                 <p class="card-focus"><strong>Course:</strong> Unified organizational AI language and rapid adoption</p>
@@ -580,9 +614,7 @@
 
             <div class="strategy-card">
                 <div class="card-header">
-                    <div class="company-logo">
-                        <img src="https://dainstudios.com/wp-content/uploads/2021/05/DAIN-Studios-Logo-Blue-1.png" alt="DAIN Studios" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
-                    </div>
+                    <div class="company-logo">D</div>
                     <h3 class="card-title">DAIN Studios - AI Maturity Model</h3>
                 </div>
                 <p class="card-focus"><strong>Course:</strong> Comprehensive maturity assessment across 5 levels</p>
@@ -595,9 +627,7 @@
 
             <div class="strategy-card">
                 <div class="card-header">
-                    <div class="company-logo">
-                        <img src="https://logos-world.net/wp-content/uploads/2021/04/Gartner-Logo.png" alt="Gartner" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
-                    </div>
+                    <div class="company-logo">G</div>
                     <h3 class="card-title">Gartner - AI Roadmap Tool</h3>
                 </div>
                 <p class="card-focus"><strong>Course:</strong> Strategic AI planning across 7 workstreams</p>
@@ -610,9 +640,7 @@
 
             <div class="strategy-card">
                 <div class="card-header">
-                    <div class="company-logo">
-                        <img src="https://logos-world.net/wp-content/uploads/2022/09/Moveworks-Logo.png" alt="Moveworks" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
-                    </div>
+                    <div class="company-logo">M</div>
                     <h3 class="card-title">Moveworks - Enterprise AI Strategy</h3>
                 </div>
                 <p class="card-focus"><strong>Course:</strong> Business-aligned AI strategy development</p>
@@ -625,9 +653,7 @@
 
             <div class="strategy-card">
                 <div class="card-header">
-                    <div class="company-logo">
-                        <img src="https://logos-world.net/wp-content/uploads/2020/09/UC-Berkeley-Logo.png" alt="UC Berkeley" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
-                    </div>
+                    <div class="company-logo">U</div>
                     <h3 class="card-title">UC Berkeley - Agentic AI Analysis</h3>
                 </div>
                 <p class="card-focus"><strong>Course:</strong> Comprehensive analysis of agentic AI opportunities and risks</p>
