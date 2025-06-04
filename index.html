@@ -78,11 +78,12 @@
             z-index: 1000;
             box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 0.1s ease-out;
+            transform-origin: center center;
         }
 
         .compass-nav:hover {
-            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
         }
 
         .compass-needle {
@@ -412,6 +413,29 @@
             margin-bottom: 15px;
         }
 
+        .tagline-section {
+            margin: 25px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--deep-sea), var(--ocean-blue));
+            border: 2px solid var(--nautical-gold);
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .tagline-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--nautical-gold);
+            margin-bottom: 10px;
+        }
+
+        .tagline-subtitle {
+            color: var(--sea-foam);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
         .github-link {
             color: var(--sea-foam);
             text-decoration: none;
@@ -421,6 +445,15 @@
 
         .github-link:hover {
             color: var(--nautical-gold);
+        }
+
+        .tagline-quote {
+            color: var(--anchor-silver);
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--horizon-mist);
         }
 
         .copyright {
@@ -705,3 +738,72 @@
                 <p class="card-features"><strong>Navigation Tools:</strong> SAFe integration, team dynamics, productivity frameworks</p>
                 <p class="card-best-for"><strong>Best for:</strong> Agile organizations implementing AI workforce augmentation</p>
                 <a href="https://www.scaledagileframework.com" class="navigate-btn" target="_blank">
+                    <i class="fas fa-compass"></i> Chart Course
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="tagline-section">
+                <h3 class="tagline-title">Charted by the AI Commander</h3>
+                <p class="tagline-subtitle">Navigating enterprises through the transformative waters of artificial intelligence.</p>
+                <p><strong><a href="https://github.com/HimJoe" class="github-link" target="_blank">github.com/HimJoe</a></strong></p>
+                <p class="tagline-quote">"In the vast ocean of AI transformation, strategic navigation charts the course to success."</p>
+            </div>
+            
+            <div class="copyright">
+                © 2025 Himanshu Joshi • <strong><a href="https://github.com/HimJoe" class="github-link" target="_blank">https://github.com/HimJoe</a></strong>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Compass rotation based on scroll
+        function updateCompass() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = scrollTop / docHeight;
+            const rotation = scrollPercent * 360; // Full rotation based on scroll progress
+            
+            const compass = document.querySelector('.compass-nav');
+            if (compass) {
+                compass.style.transform = `rotate(${rotation}deg)`;
+            }
+        }
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', updateCompass);
+        
+        // Add hover effect to compass
+        document.querySelector('.compass-nav').addEventListener('mouseenter', function() {
+            this.style.transform += ' scale(1.1)';
+        });
+        
+        document.querySelector('.compass-nav').addEventListener('mouseleave', function() {
+            updateCompass(); // Reset to scroll position
+        });
+
+        // Remove loading wave after page load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const loadingWave = document.querySelector('.loading-wave');
+                if (loadingWave) {
+                    loadingWave.style.opacity = '0';
+                    setTimeout(() => loadingWave.remove(), 500);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
